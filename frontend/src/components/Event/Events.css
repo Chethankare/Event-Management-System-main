@@ -1,0 +1,53 @@
+.eventCard {
+    /* background-color: rgb(108, 117, 125); */
+    background-image: -moz-linear-gradient( black, gray);
+    /* border: 2px solid rgb(33, 37, 41); */
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    max-width: 25%;
+    min-width: 25%;
+}
+
+
+.eventCard:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.cardButton{
+    margin: 2px;
+    padding: 10px;
+    font-size: 1.15vw;
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    font-weight: bold; 
+    cursor: pointer;  
+
+}
+
+.cardButton:hover{
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top: 8%;
+    justify-content: center;
+}
+
+.userTable {
+    margin:50px auto;    
+    font-size: small;    
+}
+
+.userTable td{
+    max-width: 115px;
+    word-wrap: break-word;
+}
