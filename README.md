@@ -1,70 +1,152 @@
-# Event Management System
+# 🎉 Event Management System
 
-This web application allows users to browse and register for events, while administrators can create and manage events. Built with React frontend and Node.js backend using MongoDB.
+A full-stack web application that allows users to browse and register for events. Administrators can manage and monitor events. Built with a simple HTML/CSS/JS frontend and Node.js/Express backend with MongoDB.
+
+---
 
 ## 🛠 Prerequisites
 
-1. [Visual Studio Code](https://code.visualstudio.com/download) (latest version)  
+Make sure the following tools are installed on your system:
+
+1. [Visual Studio Code](https://code.visualstudio.com/download)  
 2. [Node.js v18+](https://nodejs.org) (includes npm)  
 3. [MongoDB Community Server](https://www.mongodb.com/try/download/community)  
-4. [Git](https://git-scm.com/downloads) (optional for cloning)  
+4. [Git](https://git-scm.com/downloads) (optional, for version control)  
 
-## 📥 Installation
+---
 
-1. **Download/extract project files** to `C:\Event-Management-System-main`  
-2. **Open VS Code** and launch Terminal (Ctrl + \`)  
-3. **Install backend dependencies**:
-   ```bash
-   cd C:\Event-Management-System-main\backend
-   npm install
-   ```
-4. **Install frontend dependencies**:
-   ```bash
-   cd C:\Event-Management-System-main\frontend
-   npm install
-   ```
+## 📁 Project Structure
 
-## 🚀 Running the Application
+```
+Event-Management-System-main/
+│
+├── backend/
+│   ├── controller/          # Backend logic and route handlers
+│   ├── model/               # Mongoose models for MongoDB
+│   ├── index.js             # Entry point of backend server
+│   ├── package.json         # Backend dependencies
+│   └── package-lock.json
+│
+├── frontend/
+│   ├── public/              # Static assets (if any)
+│   ├── src/                 # Source scripts/styles (if any)
+│   ├── Register.html        # Registration page
+│   ├── events.html          # Events listing page
+│   ├── package.json         # Frontend (optional use)
+│   ├── package-lock.json
+│   └── .gitignore
+│
+├── README.md
+├── package.json             # Root-level (if monorepo setup)
+└── package-lock.json
+```
 
-**Start Backend Server**
+---
+
+## 📥 Installation Steps
+
+1. **Extract or clone** the project to `C:\Event-Management-System-main`  
+2. Open the folder in **Visual Studio Code**  
+3. Open Terminal (press `Ctrl + \``)
+
+### 🔧 Install backend dependencies:
+```bash
+cd C:\Event-Management-System-main\backend
+npm install
+```
+
+### 🔧 (Optional) Install frontend dependencies if any:
+```bash
+cd C:\Event-Management-System-main\frontend
+npm install
+```
+
+---
+
+## 🚀 Run the Application
+
+### ✅ Start Backend Server
 ```bash
 cd C:\Event-Management-System-main\backend
 npm start
 ```
-
-**Expected Output:**
+Expected Output:
 ```
 [nodemon] starting `node index.js`
 Server started at 4000
 Connected to DB
 ```
 
-**Start Frontend Server**
-```bash
-cd C:\Event-Management-System-main\frontend
-npm start
+### 🌐 Open Frontend
+
+Simply open the following files in your browser:
+
+- `frontend/Register.html` — to register for events  
+- `frontend/events.html` — to view events  
+
+You can also serve them using a live server extension in VS Code.
+
+---
+
+## 🔐 Environment Variables
+
+Create a `.env` file inside the `backend` directory with the following:
+
+```
+PORT=4000
+MONGODB_URI=mongodb://localhost:27017/eventdb
+JWT_SECRET=your_secret_key
 ```
 
-**Expected Output:**
-```
-Compiled successfully!
-Local:            http://localhost:3000
-On Your Network:  http://192.168.56.1:3000
-```
-
-Automatically opens browser at [http://localhost:3000](http://localhost:3000)
+---
 
 ## 👥 User Features
 
-- **Authentication:** Sign up and login  
-- **Event Browsing:** View all available events  
-- **Event Details:** See event descriptions, dates, and locations  
-- **Registration:** Sign up for events  
-- **Dashboard:** View registered events  
+- 🔐 User Authentication (Sign up/Login)  
+- 📅 View all events  
+- 📖 Event details (title, date, location, description)  
+- 📝 Register for events  
+- 📋 Dashboard to view registered events  
+
+---
 
 ## 👨‍💼 Admin Features
 
-- **Admin Login:** Special admin credentials  
-- **Event Management:** Add, edit, and delete events  
-- **Attendee Tracking:** View registered users for each event  
-- **Event Configuration:** Manage event parameters and settings  
+- 🔐 Admin Login  
+- ➕ Add new events  
+- ✏️ Edit existing events  
+- ❌ Delete events  
+- 👥 View attendees for each event  
+
+---
+
+## 🧰 Tech Stack
+
+| Layer        | Technology             |
+|--------------|------------------------|
+| Frontend     | HTML, CSS, JavaScript  |
+| Backend      | Node.js, Express.js    |
+| Database     | MongoDB with Mongoose  |
+| Auth         | JWT, bcrypt            |
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository  
+2. Create a new branch: `git checkout -b feature/your-feature`  
+3. Commit your changes: `git commit -am 'Add new feature'`  
+4. Push to the branch: `git push origin feature/your-feature`  
+5. Open a pull request  
+
+---
+
+## 📧 Contact
+
+For suggestions or queries, email: **chethankaregowda@gmail.com**
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
